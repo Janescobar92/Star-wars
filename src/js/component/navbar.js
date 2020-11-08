@@ -10,22 +10,28 @@ export const NavbarComponent = () => {
 
 	useEffect(() => {
 		// isEmpty();
-		setListItem(
-			store.favorites.map((eachFavorite, i) => {
-				return (
-					<li key={i}>
-						{eachFavorite}
-						<button
-							className="btn btn-outline-light"
-							onClick={() => {
-								actions.delete();
-							}}>
-							<i className="far fa-trash-alt" />
-						</button>
-					</li>
+		{
+			if (store.favorites.length !== 0) {
+				setListItem(
+					store.favorites.map((eachFavorite, i) => {
+						return (
+							<li key={i}>
+								{eachFavorite}
+								<button
+									className="btn btn-outline-light"
+									onClick={() => {
+										actions.delete();
+									}}>
+									<i className="far fa-trash-alt" />
+								</button>
+							</li>
+						);
+					})
 				);
-			})
-		);
+			} else {
+				setListItem("Empty");
+			}
+		}
 	});
 
 	return (
