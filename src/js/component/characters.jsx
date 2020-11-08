@@ -15,21 +15,17 @@ export const MyCardCharacterCreator = () => {
 			/>
 			<div className="card-body d-flex flex-column">
 				<h5 className="card-title">{character.name}</h5>
-				<p className="card-text mb-0">{character.gender}</p>
-				<p className="card-text my-0">{character.hair_color}</p>
-				<p className="card-text my-0">{character.height}</p>
-				<p className="card-text my-0">{character.skin_color}</p>
-				<Link to={"/characters/" + character.name}>
-					<button href="#" className="btn btn-outline-success m-auto">
-						More info
-					</button>
-				</Link>
+				<div className="Buttons-container">
+					<Link to={"/characters/" + character.name}>
+						<button href="#" className="btn btn-outline-light">
+							More info
+						</button>
+					</Link>
 
-				<button
-					onClick={() => actions.addTofavorites(character.name)}
-					className="btn btn-outline-danger m-auto">
-					<i className="far fa-heart" />
-				</button>
+					<button onClick={() => actions.addTofavorites(character.name)} className="btn btn-outline-danger">
+						<i className="far fa-heart" />
+					</button>
+				</div>
 			</div>
 		</div>
 	));

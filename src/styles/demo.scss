@@ -2,15 +2,28 @@
     width: 18rem;
     min-width: 14rem;
     margin: 0px 4px;
-    height: 30rem;
+    height: 23rem;
     background: rgba(121, 121, 121, 0.26);
+    box-shadow: 2px 2px 5px 5px rgba(24, 24, 24, 0.2);
+    color :#e7d324; 
+    .card-title{
+        border-bottom: 1px solid #e7d324;
+        margin-bottom: 2rem;
+    }
+    .Buttons-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-body{
+       height: 15rem; 
+    }
 
 }
 .cards-container-styling{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     width: 95%;
-    height: 32rem;
+    height: 25rem;
     overflow-x: scroll;
     color:white;
 }

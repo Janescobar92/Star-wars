@@ -15,19 +15,17 @@ export const MyCardPlanetsCreator = () => {
 			/>
 			<div className="card-body d-flex flex-column">
 				<h5 className="card-title">{planet.name}</h5>
-				<p className="card-text mb-0">{planet.climate}</p>
-				<p className="card-text my-0">{planet.terrain}</p>
-				<p className="card-text my-0">{planet.diameter}</p>
-				<p className="card-text my-0">{planet.population}</p>
-				<Link to={"/planets/" + planet.name}>
-					<button href="#" className="btn btn-outline-success m-auto">
-						More info
-					</button>
-				</Link>
+				<div className="Buttons-container">
+					<Link to={"/planets/" + planet.name}>
+						<button href="#" className="btn btn-outline-light">
+							More info
+						</button>
+					</Link>
 
-				<button onClick={() => actions.addTofavorites(planet.name)} className="btn btn-outline-danger m-auto">
-					<i className="far fa-heart" />
-				</button>
+					<button onClick={() => actions.addTofavorites(planet.name)} className="btn btn-outline-danger">
+						<i className="far fa-heart" />
+					</button>
+				</div>
 			</div>
 		</div>
 	));
