@@ -20,8 +20,15 @@ export const Planets = () => {
 			<div>
 				<div className="bg-text">
 					<h1 className="display-4">{params.theid}</h1>
+					<div className="d-flex justify-content-between pt-5 info-conatin">
+						<p>Terrain type : {locateIndex().terrain}</p>
 
-					<p>Terrain type : {locateIndex().terrain}</p>
+						<p>Climate : {locateIndex().climate}</p>
+
+						<p>Diameter : {locateIndex().diameter}</p>
+
+						<p>Population : {locateIndex().population}</p>
+					</div>
 				</div>
 			</div>
 		</div>
