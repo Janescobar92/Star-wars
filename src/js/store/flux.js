@@ -80,8 +80,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ characters: [...getStore().characters, formatCharacters].flat() });
 			},
 			addTofavorites: param => {
-				setStore({ favorites: [...getStore().favorites, param].flat() });
-				console.log(getStore().favorites);
+				if (!getStore().favorites.includes(param)) {
+					setStore({ favorites: [...getStore().favorites, param].flat() });
+					console.log(getStore().favorites);
+				}
 			},
 			delete: arr => {
 				getStore().favorites.splice(arr, 1);

@@ -16,7 +16,7 @@ export const NavbarComponent = () => {
 					<li key={i}>
 						{eachFavorite}
 						<button
-							className="btn btn-outline-dark"
+							className="btn btn-outline-light"
 							onClick={() => {
 								actions.delete();
 							}}>
