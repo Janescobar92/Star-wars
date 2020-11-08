@@ -20,7 +20,7 @@ export const NavbarComponent = () => {
 								<button
 									className="btn btn-outline-light"
 									onClick={() => {
-										actions.delete();
+										actions.delete(i);
 									}}>
 									<i className="far fa-trash-alt" />
 								</button>

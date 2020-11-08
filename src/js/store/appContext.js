@@ -25,6 +25,7 @@ const injectContext = PassedComponent => {
 		useEffect(() => {
 			state.actions.planetsInfoGatherer(BaseApi.concat("planets/"));
 			state.actions.charactersInfoGatherer(BaseApi.concat("people/"));
+			// localStorage.setItem("myPlanets", JSON.stringify(state.store.planets));
 			/**
 			 * EDIT THIS!
 			 * This function is the equivalent to "window.onLoad", it only runs once on the entire application lifetime
