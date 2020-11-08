@@ -21,8 +21,15 @@ export const Characters = () => {
 			<div>
 				<div className="bg-text">
 					<h1 className="display-4">{params.theid}</h1>
+					<div className="d-flex justify-content-between pt-5 info-conatin">
+						<p>Gender : {locateIndex().gender}</p>
 
-					<p>Name : {locateIndex().name}</p>
+						<p>Hair color : {locateIndex().hair_color}</p>
+
+						<p>height : {locateIndex().height + " cm"}</p>
+
+						<p>Skin color : {locateIndex().skin_color}</p>
+					</div>
 				</div>
 			</div>
 		</div>

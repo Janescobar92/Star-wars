@@ -14,14 +14,20 @@
     overflow-x: scroll;
     color:white;
 }
+.info-conatin{
+    border-top: 1px solid #e7d324;
+    font-weight: lighter;
+}
 .navbar{
 justify-content: space-between;
 background-color: rgba(209, 206, 206, 0.26);
 .logo{
+    margin-left: 5rem;
     height: 4rem;
     color: white;
 }
 .btn-success , .button {
+    margin-right: 5rem;
     color: #fff;
     background-color:  #87c7f700;
     border-color: #994a4a;
@@ -69,11 +75,13 @@ footer{
 }
 
 .bg-text {
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgba(0, 0, 0, 0.459);
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px 5px rgba(24, 24, 24, 0.2);
   color: #e7d324;
   font-weight: bold;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;

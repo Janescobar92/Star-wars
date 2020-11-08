@@ -25,7 +25,9 @@ export const MyCardCharacterCreator = () => {
 					</button>
 				</Link>
 
-				<button onClick={() => actions.addTofavorites(planet.name)} className="btn btn-outline-danger m-auto">
+				<button
+					onClick={() => actions.addTofavorites(character.name)}
+					className="btn btn-outline-danger m-auto">
 					<i className="far fa-heart" />
 				</button>
 			</div>
