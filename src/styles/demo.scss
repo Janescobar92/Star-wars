@@ -1,0 +1,83 @@
+.card-styling-class{
+    width: 18rem;
+    min-width: 14rem;
+    margin: 0px 4px;
+    height: 30rem;
+    background: rgba(121, 121, 121, 0.26);
+
+}
+.cards-container-styling{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 32rem;
+    overflow-x: scroll;
+    color:white;
+}
+.navbar{
+justify-content: space-between;
+background-color: rgba(209, 206, 206, 0.26);
+.logo{
+    height: 4rem;
+    color: white;
+}
+.btn-success , .button {
+    color: #fff;
+    background-color:  #87c7f700;
+    border-color: #994a4a;
+    border-radius: 20px;
+}
+.btn-success:hover {
+    color: #fff;
+    background-color:  #bd212183;
+    border-color: #f78787f8;
+}
+.btn-success:active {
+    color: #fff;
+    background-color:  #bd212183;
+    border-color: #f78787f8;
+}
+.btn-success.dropdown-toggle:active {
+    color: #fff;
+    background-color:  #e9101062;
+    border-color: #af1a1a81;
+}
+.btn-success:focus, .btn-success.focus {
+    color: #fff;
+    background-color: #882121d2;
+    border-color: #7e1e1eb9;
+    box-shadow: 0 0 0 0.2rem rgba(180, 72, 72, 0.5);
+}
+}
+body{
+    background-image: url("https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    overflow-x: hidden;
+}
+footer{
+    color:white
+}
+.jumbotron{
+    background-image: url("https://cdn-3.expansion.mx/dims4/default/5869fff/2147483647/strip/true/crop/1280x720+0+0/resize/1800x1013!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fd0%2F81%2F63f7ce8f40b3a57ccc2485d30c2e%2Fstar-wars-fall.jpeg");
+    background-size: 100%;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    height: 30rem;
+    width: 100%;
+}
+
+.bg-text {
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: #e7d324;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}

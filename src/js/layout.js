@@ -5,9 +5,11 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Planets } from "./views/planets.js";
+
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import { NavbarComponent } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -17,10 +19,10 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="d-flex flex-column">
+		<div className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					<NavbarComponent />
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -30,6 +32,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/planets/:theid">
+							<Planets />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
