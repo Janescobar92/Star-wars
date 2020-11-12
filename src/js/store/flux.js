@@ -7,10 +7,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			planetsInfoGatherer: URL => {
-				console.log(URL);
 				fetch(URL)
 					.then(response => {
-						console.log(response);
 						if (!response.ok) {
 							throw Error(response.status);
 						}
@@ -19,11 +17,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(responseAsJson => {
 						let planetsContent = responseAsJson.results;
 						getActions().setPlanets(planetsContent);
+
 						if (responseAsJson.next) {
 							getActions().planetsInfoGatherer(responseAsJson.next.replace(":", "s:"));
-							console.log("in the next conditional");
 						}
-						// console.log(getStore().planets);
 					})
 					.catch(error => {
 						console.log("Error status: ", error);
@@ -44,10 +41,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ planets: [...getStore().planets, formatPlantes].flat() });
 			},
 			charactersInfoGatherer: URL => {
-				console.log(URL);
 				fetch(URL)
 					.then(response => {
-						console.log(response);
 						if (!response.ok) {
 							throw Error(response.status);
 						}
@@ -58,7 +53,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						getActions().setCharacters(CharactersContent);
 						if (responseAsJson.next) {
 							getActions().charactersInfoGatherer(responseAsJson.next.replace(":", "s:"));
-							console.log("in the next conditional");
 						}
 					})
 					.catch(error => {
@@ -82,7 +76,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			addTofavorites: param => {
 				if (!getStore().favorites.includes(param)) {
 					setStore({ favorites: [...getStore().favorites, param].flat() });
-					console.log(getStore().favorites);
 				}
 			},
 			delete: arr => {

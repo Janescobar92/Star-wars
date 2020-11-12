@@ -25,7 +25,7 @@ const injectContext = PassedComponent => {
 		useEffect(() => {
 			state.actions.planetsInfoGatherer(BaseApi.concat("planets/"));
 			state.actions.charactersInfoGatherer(BaseApi.concat("people/"));
-			// localStorage.setItem("myPlanets", JSON.stringify(state.store.planets));
+			// localStorage.setItem("myPlanets", JSON.stringify([state.store]));
 			/**
 			 * EDIT THIS!
 			 * This function is the equivalent to "window.onLoad", it only runs once on the entire application lifetime
@@ -36,6 +36,12 @@ const injectContext = PassedComponent => {
 			 *
 			 **/
 		}, []);
+		// useEffect(
+		// 	() => {
+		// 		localStorage.setItem("myPlanets", JSON.stringify([state.store.favorites]));
+		// 	},
+		// 	[state.store]
+		// );
 
 		// The initial value for the context is not null anymore, but the current state of this component,
 		// the context will now have a getStore, getActions and setStore functions available, because they were declared
